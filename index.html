@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-J&J coffee organisation</title>
+    <link rel="stylesheet" href="STYLE.css">
+    <link rel="icon" type="image/X-icon" href="LOGO.png">
+    <style>
+      .slider {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.text-overlay h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+    
+}
+
+.text-overlay h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: azure;
+}
+
+.text-overlay p {
+    font-size: 2.0rem;
+    margin: 0.5rem 0 0;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 1rem;
+}
+
+.next {
+    right: 1rem;
+}
+
+/* Navigation dots */
+.slider-dots {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: white;
+}
+    </style>
+</head>
+<body>
+  <div class="loader">
+    <div class="spinner"></div>
+  </div>
+    
+   <header>
+    <div class="header-top">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="LOGO.png" alt="J&J Coffee Logo" />
+      </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html" class="active" style="color: wheat;">Home</a></li>
+        <li>
+          <a href="ABOUT US.HTML">About Us &#9662;</a>
+          <ul class="dropdown">
+            <li><a href="#">Organization History</a></li>
+            <li><a href="#">Mission</a></li>
+            <li><a href="#">Vision</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Core Values</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="OUR SERVICES.HTML">Our Services &#9662;</a>
+          <ul class="dropdown">
+            <li><a href="#">Market Access</a></li>
+            <li><a href="#">Farmers' Training</a></li>
+            <li><a href="#">Price Updates</a></li>
+            <li><a href="#">Sustainable Cultivation</a></li>
+          </ul>
+        </li>
+        <li><a href="CONTACT US.HTML">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="slider">
+    <div class="slide active" style="background-image: url('image\ 13.png');">
+      <div class="text-overlay">
+        <h2>WELCOME TO</h2>
+        <h1>J&amp;J COFFEE ORGANISATION</h1>
+        <p>Where the art of coffee is perfected</p>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('image\ 19.png');">
+      <div class="text-overlay">
+        <h2>WELCOME TO</h2>
+        <h1>J&amp;J COFFEE ORGANISATION</h1>
+        <p>Where the art of coffee is perfected</p>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('IMAGE\ 10.jpg');">
+      <div class="text-overlay">
+        <h2>WELCOME TO</h2>
+        <h1>J&amp;J COFFEE ORGANISATION</h1>
+        <p>Where the art of coffee is perfected</p>
+      </div>
+    </div>
+    <div class="slide" style="background-image: url('IMAGE\ 16.jpg');">
+      <div class="text-overlay">
+        <h2>WELCOME TO</h2>
+        <h1>J&amp;J COFFEE ORGANISATION</h1>
+        <p>Where the art of coffee is perfected</p>
+      </div>
+    </div>
+  
+    <!-- Navigation Buttons -->
+    <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+  
+
+<!-- About Us Section -->
+<section class="about-us-section">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>
+        At J &amp; J Coffee Organisation, our mission is to nurture sustainable coffee farming while empowering rural communities.
+        We believe every cup of coffee should tell a story of care, connection, and impact.
+      </p>
+      <a href="more about our journey.html" class="learn-more-btn">Learn more about our journey</a>
+    </div>
+    <div class="about-image">
+      <img src="IMAGE 11.jpg" alt="Founders or Coffee Farm">
+    </div>
+  </div>
+</section><br>
+
+
+<!-- Our Impact Section -->
+<section class="impact-section">
+  <div class="impact-header">
+    <h2>Our Impact</h2>
+    <p>We’re rooted in purpose — from how we farm to how we support communities.</p>
+  </div>
+
+  <div class="impact-grid">
+    <div class="impact-card">
+      <img src="eco.png" alt="Sustainable Farming Icon">
+      <h3>Sustainable Farming</h3>
+      <p>We use eco-friendly methods that protect the soil, conserve water, and ensure long-term productivity.</p>
+    </div>
+    <div class="impact-card">
+      <img src="group.png" alt="Community Empowerment Icon">
+      <h3>Community Empowerment</h3>
+      <p>We invest in education, training, and fair wages for local farmers and their families.</p>
+    </div>
+    <div class="impact-card">
+      <img src="seedlings.png" alt="Organic Practices Icon">
+      <h3>Organic Practices</h3>
+      <p>Our coffee is grown without harmful chemicals, preserving the environment and your health.</p>
+    </div>
+    <div class="impact-card">
+      <img src="handshake.png" alt="Fair Trade Commitment Icon">
+      <h3>Fair Trade Commitment</h3>
+      <p>We partner with ethical suppliers to ensure farmers receive fair compensation for their work.</p>
+    </div>
+  </div>
+</section>
+<br>
+
+<!-- Video Section -->
+<section class="video-section">
+  <div class="video-content">
+    <h2>Discover the Journey Behind Every Bean</h2>
+    <div class="video-container">
+      <iframe width="100%" height="450" src="VIDEO 2.mp4" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+
+<div style="text-align: center; margin-top: 100px;">  
+  <a href="CONTACT US.html" class="cta-button">Get in Touch</a>
+</div><br>
+
+<!-- Featured Products Section -->
+<section class="products-section">
+  <div class="products-header">
+    <h2>Our Featured Coffee</h2>
+    <p>Handpicked varieties that bring the warmth of our farms to your cup.</p>
+  </div>
+
+  <div class="products-grid">
+    <div class="product-card">
+      <img src="IMAGE 8.jpg" alt="Farmer's Blend">
+      <h3>Farmer's Blend</h3>
+      <span class="product-tag">Dark Roast</span>
+      <p class="price">UGX 25,000 - 35,000</p>
+    </div>
+
+    <div class="product-card">
+      <img src="IMAGE 10.jpg" alt="Organic Beans">
+      <h3>Organic Whole Beans</h3>
+      <span class="product-tag">Medium Roast</span>
+      <p class="price">UGX 20,000 - 30,000</p>
+    </div>
+
+    <div class="product-card">
+      <img src="IMAGE 15.jpg" alt="Gift Pack">
+      <h3>Signature Gift Pack</h3>
+      <span class="product-tag">Mixed Selection</span>
+      <p class="price">UGX 50,000</p>
+    </div>
+  </div>
+
+  <div class="products-cta">
+    <a href="#products" class="view-products-btn">View All Products</a>
+  </div>
+</section>
+<br>
+
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+  <div class="testimonials-header">
+    <h2>What Our Partners Say</h2>
+    <p>Our journey wouldn't be the same without the voices of our farmers and customers.</p>
+  </div>
+
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <p>"J & J Coffee's support has changed the way we farm. The training and fair trade practices have allowed us to improve our yields and income."</p>
+      <span class="author">- Kizza Samuel., Local Farmer</span>
+    </div>
+
+    <div class="testimonial-card">
+      <p>"The Farmer’s Blend is my favorite! I love knowing that every cup I drink supports local farmers and sustainable farming practices."</p>
+      <span class="author">- Sarah W., Coffee Enthusiast</span>
+    </div>
+
+    <div class="testimonial-card">
+      <p>"Working with J & J Coffee has been a rewarding experience. They truly care about their farmers, and their coffee is second to none!"</p>
+      <span class="author">- Samuel K., Coffee Distributor</span>
+    </div>
+  </div>
+</section>
+
+
+
+    <br><br>
+    <section class="image-gallery">
+        <div class="gallery-item">
+            <img src="image 4.jpg" alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="image 9.jpg" alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="image 2.jpg" alt="Image 3">
+        </div>
+    </section>
+
+     <main>
+        <h2>Download Our PDF</h2>
+        <a href="C:\Users\Josephine\Desktop\END\Arabic Coffee Handbook-web2.pdf" target="_blank" class="pdf-link">Click to View PDF</a>
+    </main>
+
+   
+ 
+    <footer class="site-footer">
+        <div class="footer-container">
+          <div class="footer-about">
+            <h3>Home</h3>
+            <p>We are a community-driven coffee-growing organization focused on empowering farmers, promoting sustainable practices, and delivering premium coffee to the world.</p>
+          </div>
+      
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="HOMEPAGE.HTML">Home</a></li>
+              <li><a href="ABOUT US.HTML">About us</a></li>
+              <li><a href="OUR SERVICES.HTML">Our services</a></li>
+              <li><a href="CONTACT US.HTML">Contact us</a></li>
+            </ul>
+          </div>
+      
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: info@coffeegrowers.org</p>
+            <p>Phone: +123 456 7890</p>
+            <p>Location: Rural Highlands, East Africa</p>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>&copy; 2025 Coffee Growers Organization. All rights reserved.</p>
+        </div> <div class="header-top">
+          <div class="social-media">
+              <a href="https://facebook.com" target="_blank"><img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook"></a>
+              <a href="https://twitter.com" target="_blank"><img src="https://img.icons8.com/color/48/000000/twitter.png" alt="Twitter"></a>
+              <a href="https://instagram.com" target="_blank"><img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram"></a>
+              <a href="https://www.tiktok.com" target="_blank"><img src="https://img.icons8.com/color/48/000000/tiktok.png" alt="Tiktok"></a>
+          </div>
+      </div>
+
+      </footer>
+          
+      <script src="slider.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.createElement('div');
+    dotsContainer.className = 'slider-dots';
+    document.querySelector('.slider').appendChild(dotsContainer);
+    
+    // Create dots
+    slides.forEach((slide, index) => {
+        const dot = document.createElement('div');
+        dot.className = 'dot';
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+            goToSlide(index);
+        });
+        dotsContainer.appendChild(dot);
+    });
+    
+    const dots = document.querySelectorAll('.dot');
+    
+    function goToSlide(n) {
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+    
+    function changeSlide(n) {
+        goToSlide(currentSlide + n);
+        resetInterval();
+    }
+    
+    // Auto slide
+    let slideInterval = setInterval(() => {
+        changeSlide(1);
+    }, 5000);
+    
+    function resetInterval() {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(() => {
+            changeSlide(1);
+        }, 3000);
+    }
+    
+    // Button events
+    document.querySelector('.prev').addEventListener('click', () => {
+        changeSlide(-1);
+    });
+    
+    document.querySelector('.next').addEventListener('click', () => {
+        changeSlide(1);
+    });
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            changeSlide(-1);
+        } else if (e.key === 'ArrowRight') {
+            changeSlide(1);
+        }
+    });
+});
+      </script>
+</body>
+</html>
